@@ -1,0 +1,19 @@
+<h1>Add new review</h1>
+<%= form_with scope: :book, url: books_new_review_path, local:true do |form|%>
+
+    <p>
+        <%= form.label :reviewName%><br>
+        <%= form.text_field :reviewName%>
+    </p>
+
+    <p>
+        <%= form.label :reviewText%><br>
+        <%= form.text_field :reviewText%>
+    </p>
+
+    <p>
+        <%= form.submit%>
+    </p>
+<%end%>
+
+<%= link_to  "Cancel", patron_path %>
