@@ -7,6 +7,12 @@ class BooksController < ApplicationController
         @books = Book.all
     end
 
+    def checkout
+        @book = Book.find(params[:id])
+        @book.update(copies: @book.copies - 1)
+        redirect_to @book
+    end
+
     def show
         @book = Book.find(params[:id])
     end

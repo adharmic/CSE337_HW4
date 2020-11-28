@@ -16,6 +16,7 @@
             <td><%= book.isbn %></td>
             <td><%= book.copies %></td>
             <td><%= link_to 'Edit Book', book_path(book) %></td>
+            <td><%= link_to 'Checkout Book', books_checkout_path(book) %></td>
         </tr>
     <%end%>
 </table>
