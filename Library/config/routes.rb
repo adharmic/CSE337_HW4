@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :books
   root 'lookup#index'
   get 'admin' => 'lookup#admin', as: 'admin'
+  get 'patron' => 'lookup#patron', as: 'patron'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

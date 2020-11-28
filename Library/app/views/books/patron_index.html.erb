@@ -1,0 +1,24 @@
+<h1>Books in Library</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Copies</th>
+        <th></th>
+    </tr>
+
+    <% @books.each do |book|%>
+        <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.isbn %></td>
+            <td><%= book.copies %></td>
+            <td><%= link_to 'Add a review', book_path(book) %></td>
+            <td><%= link_to 'View reviews', book_path(book) %></td>
+        </tr>
+    <%end%>
+</table>
+
+<%= link_to  "Back", admin_path %>
